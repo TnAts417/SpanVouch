@@ -7,11 +7,11 @@
 <p align="center"><strong>面向生产级 AI Agent 的证据化失败诊断基础设施。</strong></p>
 
 <p align="center">
-  <a href="https://github.com/naturaljam/SpanVouch/actions/workflows/ci.yml">CI</a> &middot;
+  <a href="https://github.com/TnAts417/SpanVouch/actions/workflows/ci.yml">CI</a> &middot;
   <a href="https://www.python.org/">Python 3.12</a> &middot;
   <a href="LICENSE">MIT License</a> &middot;
   <a href="paper/IVAD.pdf">IVAD 技术报告</a> &middot;
-  <a href="https://github.com/naturaljam/SpanVouch/releases/tag/v0.7.0">v0.7.0</a>
+  <a href="https://github.com/TnAts417/SpanVouch/releases/tag/v0.7.0">v0.7.0</a>
 </p>
 
 <p align="center">
@@ -28,7 +28,7 @@ SpanVouch 将 Agent 执行轨迹转换为可审计、可恢复、可复现的诊
            -> 持久状态 + 签名审计导出
 ```
 
-[阅读 IVAD 技术报告](paper/IVAD.pdf) | [查看 LaTeX 源码](paper/source/) | [下载 v0.7.0](https://github.com/naturaljam/SpanVouch/releases/tag/v0.7.0)
+[阅读 IVAD 技术报告](paper/IVAD.pdf) | [查看 LaTeX 源码](paper/source/) | [下载 v0.7.0](https://github.com/TnAts417/SpanVouch/releases/tag/v0.7.0)
 
 ## 为什么需要证据层
 
@@ -71,7 +71,7 @@ SpanVouch 是 IVAD 的工程实现。核心包括：
 安装 Python 3.12 和 [uv](https://docs.astral.sh/uv/)：
 
 ```bash
-git clone https://github.com/naturaljam/SpanVouch.git
+git clone https://github.com/TnAts417/SpanVouch.git
 cd SpanVouch
 uv sync --frozen --group dev
 uv run spanvouch dataset generate --output .cache/readme-check --seed 20260715
@@ -181,7 +181,7 @@ paper/           IVAD 技术报告、可复现源码和构建说明
   title  = {IVAD: Evidence-Constrained and Risk-Controlled Failure Diagnosis for AI Agents},
   author = {Liu, Hanzhe},
   year   = {2026},
-  url    = {https://github.com/naturaljam/SpanVouch/blob/main/paper/IVAD.pdf}
+  url    = {https://github.com/TnAts417/SpanVouch/blob/main/paper/IVAD.pdf}
 }
 ```
 

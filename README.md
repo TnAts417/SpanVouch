@@ -7,11 +7,11 @@
 <p align="center"><strong>Evidence-backed failure diagnosis infrastructure for production AI agents.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/naturaljam/SpanVouch/actions/workflows/ci.yml">CI</a> &middot;
+  <a href="https://github.com/TnAts417/SpanVouch/actions/workflows/ci.yml">CI</a> &middot;
   <a href="https://www.python.org/">Python 3.12</a> &middot;
   <a href="LICENSE">MIT License</a> &middot;
   <a href="paper/IVAD.pdf">IVAD Technical Report</a> &middot;
-  <a href="https://github.com/naturaljam/SpanVouch/releases/tag/v0.7.0">v0.7.0</a>
+  <a href="https://github.com/TnAts417/SpanVouch/releases/tag/v0.7.0">v0.7.0</a>
 </p>
 
 <p align="center">
@@ -28,7 +28,7 @@ immutable trace -> sanitized evidence -> structured diagnosis
                 -> durable state + reproducible artifact
 ```
 
-[Read the IVAD Technical Report](paper/IVAD.pdf) | [Browse the LaTeX source](paper/source/) | [Download release v0.7.0](https://github.com/naturaljam/SpanVouch/releases/tag/v0.7.0)
+[Read the IVAD Technical Report](paper/IVAD.pdf) | [Browse the LaTeX source](paper/source/) | [Download release v0.7.0](https://github.com/TnAts417/SpanVouch/releases/tag/v0.7.0)
 
 ## Why agent diagnosis needs an evidence layer
 
@@ -87,7 +87,7 @@ The formal statement assumes a frozen loss and pipeline, independently sampled p
 - [Read the Technical Report](paper/IVAD.pdf)
 - [Build from the reproducible LaTeX source](paper/source/)
 - [Review report construction and CC BY 4.0 licensing](paper/README.md)
-- [Download the versioned PDF and source archive](https://github.com/naturaljam/SpanVouch/releases/tag/v0.7.0)
+- [Download the versioned PDF and source archive](https://github.com/TnAts417/SpanVouch/releases/tag/v0.7.0)
 
 The v0.7 formal evidence bundle is [published in the repository](evals/reports/reference/phase5-formal-deepseek-only/). It binds aggregate results to evaluated-results SHA-256 `bc09f1b134de9370a3b5209fa5e959bce01abbcdf05c8456af1f069fc4cd3088` and records 2,148 scheduled/evaluated cells with 0 missing cells. B0-B3 completed under DeepSeek-only conditions; B4 and B5 are `policy-skipped` with no Qwen results. H1-H5 remain unresolved.
 
@@ -135,7 +135,7 @@ The release exposes a Python package, command-line interface (CLI), FastAPI appl
 Install Python 3.12 and [uv 0.8.x](https://docs.astral.sh/uv/). Docker Compose v2 is optional.
 
 ```bash
-git clone https://github.com/naturaljam/SpanVouch.git
+git clone https://github.com/TnAts417/SpanVouch.git
 cd SpanVouch
 uv sync --frozen --group dev
 uv run spanvouch dataset generate --output .cache/readme-check --seed 20260715
@@ -261,7 +261,7 @@ GitHub reads [`CITATION.cff`](CITATION.cff) and exposes the repository's citatio
   title  = {IVAD: Evidence-Constrained and Risk-Controlled Failure Diagnosis for AI Agents},
   author = {Liu, Hanzhe},
   year   = {2026},
-  url    = {https://github.com/naturaljam/SpanVouch/blob/main/paper/IVAD.pdf}
+  url    = {https://github.com/TnAts417/SpanVouch/blob/main/paper/IVAD.pdf}
 }
 ```
 

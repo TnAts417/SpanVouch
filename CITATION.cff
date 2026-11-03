@@ -6,8 +6,8 @@ authors:
   - family-names: Liu
     given-names: Hanzhe
     affiliation: Independent Researcher
-repository-code: "https://github.com/naturaljam/SpanVouch"
-url: "https://github.com/naturaljam/SpanVouch"
+repository-code: "https://github.com/TnAts417/SpanVouch"
+url: "https://github.com/TnAts417/SpanVouch"
 license: MIT
 version: 0.7.0
 date-released: 2026-08-03
@@ -25,4 +25,4 @@ preferred-citation:
       given-names: Hanzhe
       affiliation: Independent Researcher
   year: 2026
-  url: "https://github.com/naturaljam/SpanVouch/blob/main/paper/IVAD.pdf"
+  url: "https://github.com/TnAts417/SpanVouch/blob/main/paper/IVAD.pdf"

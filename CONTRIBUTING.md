@@ -8,7 +8,7 @@ offline defaults, and reproducible artifacts.
 SpanVouch requires Python 3.12 and uv 0.8.x.
 
 ```bash
-git clone https://github.com/naturaljam/SpanVouch.git
+git clone https://github.com/TnAts417/SpanVouch.git
 cd SpanVouch
 uv sync --frozen --group dev
 ```

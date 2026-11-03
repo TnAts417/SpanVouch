@@ -3,7 +3,7 @@
 ## Report a vulnerability
 
 Do not disclose suspected vulnerabilities in a public issue. Use
-[GitHub private vulnerability reporting](https://github.com/naturaljam/SpanVouch/security/advisories/new)
+[GitHub private vulnerability reporting](https://github.com/TnAts417/SpanVouch/security/advisories/new)
 and include the affected commit or version, impact, reproduction steps, and any suggested
 mitigation.
 
