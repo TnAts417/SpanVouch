@@ -65,6 +65,7 @@ _ASSIGNMENT_PATTERNS = (
 )
 _KEY_LITERAL_PATTERN = re.compile(r"(?<![A-Za-z0-9])sk-[A-Za-z0-9]{24,}(?![A-Za-z0-9])")
 _DOCUMENTATION_PLACEHOLDERS = frozenset({"", "<set-locally>"})
+_NON_SECRET_SENTINEL = "offline-test-sentinel-not-a-credential"
 
 
 class FailingSemanticVerifier:
@@ -514,6 +515,8 @@ def _credential_findings(relative: str, text: str) -> tuple[str, ...]:
             value = match.group("value").strip().removesuffix(",").strip()
             if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
                 value = value[1:-1].strip()
+            if value == _NON_SECRET_SENTINEL:
+                continue
             if is_template and value in _DOCUMENTATION_PLACEHOLDERS:
                 continue
             findings.append("credential_assignment")
@@ -533,6 +536,7 @@ def _credential_findings(relative: str, text: str) -> tuple[str, ...]:
         ("settings.py", 'provider_key = "' + "sk-" + "A" * 32 + '"'),
         ("config.env", _KEY_NAME + "="),
         (".env.example", _KEY_NAME + "=live-value"),
+        ("config.env", _KEY_NAME + "=offline-test-sentinel-not-a-credential-v2"),
     ),
 )
 def test_credential_scanner_detects_assignment_syntaxes_and_key_literals(
@@ -550,6 +554,14 @@ def test_credential_scanner_detects_assignment_syntaxes_and_key_literals(
         ("README.md", "Set `" + _KEY_NAME + "` in the local environment."),
         ("test_client.py", 'sentinel = "sk-private-provider-response"'),
         ("config.yaml", "# " + _KEY_NAME + ": documented-only"),
+        (
+            "plans/example-plan.md",
+            "$env:" + _KEY_NAME + "='offline-test-sentinel-not-a-credential'",
+        ),
+        (
+            ".github/workflows/ci.yml",
+            "          " + _KEY_NAME + ": offline-test-sentinel-not-a-credential",
+        ),
     ),
 )
 def test_credential_scanner_allows_only_non_secret_documentation_forms(
